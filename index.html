@@ -262,7 +262,10 @@ footer .wrap{display:flex;align-items:center;justify-content:space-between;gap:3
   .orbit{aspect-ratio:4/3}
 }
 @media (max-width:560px){
-  .legends .wrap{grid-template-columns:1fr}
+  .legends .wrap{grid-template-columns:1fr 1fr;gap:12px}
+  .legends .card{aspect-ratio:3/4}
+  .legends .card .tag{top:10px;left:10px;width:24px}
+  .legends .card .frame img{object-position:70% center}
   .thumbs{grid-template-columns:1fr 1fr;gap:12px}
   footer .wrap{flex-direction:column;align-items:flex-start}
   .field-cta{letter-spacing:.3em}
