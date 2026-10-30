@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>adidas F50 Hyperfast Elite</title>
+<meta name="description" content="F50 Hyperfast Elite. Velocidad. Control. Dominio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Michroma&family=Oxanium:wght@500;600;700;800&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#03060f;
+  --bg-2:#060c1d;
+  --line:rgba(120,160,255,.16);
+  --text:#eef3ff;
+  --muted:#aeb9d4;
+  --cyan:#29b6ff;
+  --blue:#2b4dff;
+  --red:#ff2d4a;
+  --violet:#8a3dff;
+  --gutter:clamp(20px,5vw,64px);
+  --display:'Oxanium',system-ui,sans-serif;
+  --wide:'Michroma','Oxanium',sans-serif;
+  --body:'Manrope',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px;background:var(--bg)}
+body{background:var(--bg);color:var(--text);font-family:var(--body);line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1360px;margin:0 auto;padding:0 var(--gutter)}
+.eyebrow{font-family:var(--display);font-weight:600;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan)}
+.h2{font-family:var(--display);font-weight:700;text-transform:uppercase;line-height:1.02;letter-spacing:.02em;font-size:clamp(2rem,3.6vw,3.1rem)}
+.lead{font-family:var(--display);text-transform:uppercase;letter-spacing:.12em;font-size:.86rem;line-height:1.7;color:#dfe6f7}
+p{color:var(--muted);font-size:.98rem;max-width:44ch}
+.white-icon{filter:drop-shadow(0 0 10px rgba(41,182,255,.25))}
+
+/* ---------- NAV ---------- */
+header{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .4s,backdrop-filter .4s,border-color .4s;border-bottom:1px solid transparent}
+header.scrolled{background:rgba(3,6,15,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:84px}
+.nav .logo img{width:46px}
+.nav ul{display:flex;gap:clamp(18px,3vw,40px);list-style:none}
+.nav ul a{font-family:var(--display);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:#c4cde4;padding:6px 0;position:relative;transition:color .3s}
+.nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue));transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.nav ul a:hover,.nav ul a.active{color:#fff}
+.nav ul a.active::after{transform:scaleX(1)}
+.nav ul a:not(.active):hover::after{transform:scaleX(1);opacity:.35}
+.nav .right{display:flex;align-items:center;gap:24px}
+.nav .right .sep{width:1px;height:28px;background:var(--line)}
+.nav .ig svg{width:22px;height:22px;transition:transform .3s}
+.nav .ig:hover svg{transform:scale(1.12)}
+.burger{display:none;background:none;border:0;width:36px;height:36px;cursor:pointer;position:relative}
+.burger span{position:absolute;left:6px;right:6px;height:2px;background:#fff;transition:.3s}
+.burger span:nth-child(1){top:12px}.burger span:nth-child(2){top:22px}
+.menu-open .burger span:nth-child(1){top:17px;transform:rotate(45deg)}
+.menu-open .burger span:nth-child(2){top:17px;transform:rotate(-45deg)}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden;
+  background:
+   radial-gradient(60% 55% at 62% 45%,rgba(43,77,255,.28),transparent 70%),
+   radial-gradient(40% 30% at 75% 85%,rgba(255,45,74,.12),transparent 70%),
+   radial-gradient(80% 60% at 50% 0%,#0a1638 0%,transparent 70%),var(--bg)}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--line)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.2fr);align-items:center;gap:20px;width:100%;position:relative}
+.brand-kicker{font-family:var(--wide);font-size:.95rem;letter-spacing:.5em;color:#dfe6ff;margin-bottom:8px}
+.f50{font-family:var(--wide);font-weight:400;font-size:clamp(4.6rem,10.5vw,9.4rem);line-height:.9;letter-spacing:-.02em;transform:skewX(-14deg);display:inline-block;
+  background:linear-gradient(180deg,#fff 30%,#b9c8ef 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 6px 30px rgba(41,120,255,.35))}
+.hyper{font-family:var(--display);font-weight:500;font-size:clamp(1.3rem,2.3vw,2rem);letter-spacing:.32em;margin-top:10px}
+.tagline{font-family:var(--display);font-size:.82rem;letter-spacing:.24em;color:#c9d3ec;margin:18px 0 28px}
+.hero p{color:#cfd7ec}
+.cta{display:inline-flex;align-items:center;gap:14px;margin-top:34px;padding:15px 26px;border:1px solid rgba(41,182,255,.5);font-family:var(--display);font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;position:relative;overflow:hidden;transition:color .3s,border-color .3s}
+.cta::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--blue),var(--cyan));transform:translateX(-101%);transition:transform .45s cubic-bezier(.7,0,.2,1);z-index:-1}
+.cta:hover::before{transform:none}.cta:hover{border-color:transparent}
+.cta svg{width:18px;transition:transform .3s}.cta:hover svg{transform:translateX(4px)}
+
+.hero-visual{position:relative;aspect-ratio:1/1;max-width:720px;justify-self:center;width:100%}
+.hero-visual .streak{position:absolute;inset:4% -8% 8% -6%;pointer-events:none}
+/* 360 viewer */
+.viewer{position:absolute;inset:2% -4% 12% -4%;outline:none;user-select:none;-webkit-user-select:none}
+.viewer:active{cursor:grabbing}
+.viewer:focus-visible{outline:1px dashed rgba(41,182,255,.5);outline-offset:8px;border-radius:12px}
+.v-float{position:relative;width:100%;height:100%}
+.v-canvas{display:block;width:100%;height:100%;cursor:grab;touch-action:pan-y;opacity:0;transition:opacity .8s}
+.v-canvas:active{cursor:grabbing}
+.viewer.ready .v-canvas{opacity:1}
+.v-flip{position:relative;width:100%;height:100%;perspective:1400px}
+.v-stack{position:absolute;inset:0;transition:transform .8s cubic-bezier(.6,0,.2,1),opacity .5s}
+.v-stack img,.v-sole img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;pointer-events:none;will-change:opacity,transform;
+  filter:drop-shadow(0 26px 30px rgba(0,0,0,.55)) drop-shadow(0 0 34px rgba(43,77,255,.35))}
+.v-sole{position:absolute;inset:0;transition:transform .8s cubic-bezier(.6,0,.2,1),opacity .5s;transform:rotateX(-90deg);opacity:0}
+.v-sole img{opacity:1}
+.viewer.sole .v-stack{transform:rotateX(90deg);opacity:0}
+.viewer.sole .v-sole{transform:none;opacity:1}
+.v-ui{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;font-family:var(--display);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:#aebbd9;z-index:3}
+.v-label{min-width:14ch;text-align:right;color:#fff}
+.v-dots{display:flex;gap:8px}
+.v-dots button{width:8px;height:8px;border-radius:50%;border:1px solid #7f95c9;background:transparent;padding:0;cursor:pointer;transition:.3s}
+.v-dots button.on{background:var(--cyan);border-color:var(--cyan);box-shadow:0 0 10px var(--cyan)}
+.v-sole-btn{background:none;border:1px solid rgba(41,182,255,.45);color:#fff;font:inherit;letter-spacing:inherit;padding:8px 14px;cursor:pointer;transition:.3s}
+.v-sole-btn:hover,.viewer.sole~.v-ui .v-sole-btn{background:rgba(41,182,255,.15);border-color:var(--cyan)}
+.v-hint{position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:10px;padding:10px 16px;border-radius:40px;background:rgba(3,6,15,.6);backdrop-filter:blur(6px);font-family:var(--display);font-size:.66rem;letter-spacing:.2em;color:#fff;white-space:nowrap;pointer-events:none;transition:opacity .6s;z-index:4}
+.v-hint svg{width:22px}
+.v-hint.hide{opacity:0}
+.badge360 img{transition:opacity .3s,filter .3s}
+.badge360:not(.on) img{opacity:.55}
+.badge360.on img{filter:drop-shadow(0 0 6px rgba(41,182,255,.9)) drop-shadow(0 0 16px rgba(41,182,255,.45));animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.06)}}
+.hero-floor{position:absolute;left:12%;right:12%;bottom:15%;height:30px;background:radial-gradient(50% 50% at 50% 50%,rgba(64,140,255,.7),transparent 70%);filter:blur(10px);animation:floor 6s ease-in-out infinite}
+.hero-floor::after{content:"";position:absolute;left:10%;right:10%;top:50%;height:2px;background:linear-gradient(90deg,transparent,#5aa8ff,#fff,#ff3a5a,transparent)}
+@keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-16px) rotate(-1.2deg)}}
+@keyframes floor{0%,100%{opacity:.9;transform:scaleX(1)}50%{opacity:.55;transform:scaleX(.9)}}
+.badge360{position:absolute;top:0;right:12%;z-index:5;cursor:pointer;background:none;border:0;padding:6px}
+.badge360 img{display:block;width:78px;height:auto}
+.badge360:hover img{opacity:1;filter:drop-shadow(0 0 8px rgba(41,182,255,.9))}
+.badge360:focus-visible{outline:1px dashed var(--cyan);outline-offset:4px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.speedframe{position:absolute;top:0;right:0;border-left:1px solid rgba(255,255,255,.3);padding:6px 0 0 14px;height:170px;font-family:var(--display);font-size:.66rem;letter-spacing:.12em;line-height:1.6}
+.speedframe img{width:24px;position:absolute;bottom:0;left:14px}
+.scroll-ind{position:absolute;right:var(--gutter);bottom:40px;display:flex;flex-direction:column;align-items:center;gap:10px;font-family:var(--display);font-size:.6rem;letter-spacing:.3em;color:#9aa6c4}
+.scroll-ind span{writing-mode:vertical-rl}
+.scroll-ind i{width:1px;height:46px;background:linear-gradient(#9aa6c4,transparent);position:relative;overflow:hidden}
+.scroll-ind i::after{content:"";position:absolute;left:0;top:-20px;width:1px;height:20px;background:#fff;animation:drip 2s infinite}
+.scroll-ind b{width:9px;height:9px;border:1px solid #9aa6c4;border-radius:50%}
+@keyframes drip{to{top:46px}}
+
+/* ---------- FEATURES ---------- */
+.features{border-bottom:1px solid var(--line);background:linear-gradient(180deg,#050a18,var(--bg))}
+.features .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
+.feat{text-align:center;padding:44px 24px;position:relative}
+.feat+.feat::before{content:"";position:absolute;left:0;top:20%;bottom:20%;width:1px;background:var(--line)}
+.feat .ic{height:48px;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.feat .ic img{max-height:44px;width:auto;transition:transform .4s}
+.feat:hover .ic img{transform:translateY(-4px) scale(1.06)}
+.feat h3{font-family:var(--display);font-weight:600;font-size:.86rem;letter-spacing:.22em;margin-bottom:8px}
+.feat p{margin:0 auto;font-size:.92rem;max-width:26ch}
+
+/* ---------- HALOSKIN ---------- */
+.tech{position:relative;padding:clamp(70px,9vw,120px) 0;border-bottom:1px solid var(--line);overflow:hidden}
+.tech .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) auto;gap:clamp(28px,4vw,56px);align-items:center}
+.side-label{position:absolute;left:clamp(6px,1.6vw,22px);top:50%;transform:translateY(-50%) rotate(-90deg);transform-origin:center;font-family:var(--display);font-size:.7rem;letter-spacing:.24em;display:flex;align-items:center;gap:10px;white-space:nowrap}
+.side-label::after{content:"";width:4px;height:4px;border-radius:50%;background:var(--cyan)}
+.frame{position:relative;border-radius:14px;overflow:hidden;border:1px solid rgba(120,170,255,.35);background:linear-gradient(140deg,#0f1d44,#060b1c);box-shadow:0 0 0 1px rgba(255,255,255,.03) inset,0 30px 70px -20px rgba(20,60,200,.45)}
+.frame img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.frame:hover img{transform:scale(1.06)}
+.frame::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,.12),transparent 35%);pointer-events:none}
+.tech .big{aspect-ratio:4/3}
+.tech h2 .plus{color:var(--cyan)}
+.tech h2{font-size:clamp(2.2rem,4vw,3.4rem);margin:8px 0 26px}
+.tech .lead{margin-bottom:22px}
+.thumbs{display:grid;gap:18px;width:clamp(180px,16vw,230px)}
+.thumb{display:grid;grid-template-columns:1fr;gap:8px}
+.thumb .frame{aspect-ratio:1/.95;border-radius:10px}
+.thumb .frame img{object-fit:cover}
+.thumb .cap{font-family:var(--display);font-size:.62rem;letter-spacing:.18em;color:#c5cee6;text-align:right}
+
+/* ---------- DESIGN ---------- */
+.design{position:relative;padding:clamp(70px,9vw,110px) 0;border-bottom:1px solid var(--line);overflow:hidden;
+  background:radial-gradient(45% 55% at 60% 55%,rgba(60,70,255,.22),transparent 70%)}
+.design .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:24px;align-items:center}
+.design .copy p{margin-top:20px}
+.design h2{margin-top:8px}
+.orbit{position:relative;aspect-ratio:16/10;display:flex;align-items:center;justify-content:center}
+.orbit svg.rings{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.orbit img{position:relative;width:min(70%,560px);z-index:2;animation:float 7s ease-in-out infinite;filter:drop-shadow(0 30px 30px rgba(0,0,0,.55)) drop-shadow(0 0 30px rgba(90,80,255,.4))}
+.rings .r{fill:none;stroke-width:1.4;transform-origin:50% 50%}
+.rings .r1{stroke:url(#g1)}
+.rings .r2{stroke:url(#g2)}
+.spinA,.spinB{transform-origin:400px 250px}
+.spinA{animation:spinR 18s linear infinite}
+.spinB{animation:spinR 26s linear infinite reverse}
+@keyframes spinR{to{transform:rotate(360deg)}}
+
+/* electric spark travelling along every ring */
+.rings .spark{fill:none;stroke:#e6f4ff;stroke-linecap:round;filter:url(#zap);stroke-dasharray:7 93;animation:run 3.2s linear infinite,flicker .18s steps(2) infinite}
+.rings .s1{stroke-width:2.6}
+.rings .s1b{stroke-width:1.4;stroke:#7fd0ff;stroke-dasharray:3 97;animation-duration:3.2s,.23s;animation-delay:-.25s,0s}
+.rings .s2{stroke-width:2.4;stroke:#f0e6ff;animation-duration:2.6s,.2s;animation-direction:reverse,normal}
+.rings .s2b{stroke-width:1.2;stroke:#c08bff;stroke-dasharray:3 97;animation-duration:2.6s,.25s;animation-direction:reverse,normal;animation-delay:-.2s,0s}
+.rings .s3{stroke-width:2.2;stroke-dasharray:10 90;animation-duration:2.2s,.19s}
+.rings .s4{stroke-width:1.4;stroke:#d9b8ff;stroke-dasharray:8 92;animation-duration:1.8s,.22s;animation-direction:reverse,normal}
+@keyframes run{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}
+@keyframes flicker{0%{opacity:1}50%{opacity:.55}}
+
+/* platform lights up when the cleats reach the lowest point of the float (same 7s cycle) */
+.design .orbit img{animation:float 7s ease-in-out infinite}
+.pad-ring{filter:drop-shadow(0 0 8px #4f8bff)}
+.pad-inner{opacity:.7}
+.pad-ring,.pad-inner,.pad-base,.beam,.pad-wave{animation:7s ease-in-out infinite}
+.pad-ring{animation-name:padRing}
+.pad-inner{animation-name:padInner}
+.pad-base{animation-name:padBase;transform-origin:400px 440px}
+.beam{animation-name:beam;transform-origin:400px 440px}
+.pad-wave{animation-name:wave;animation-timing-function:ease-out;transform-origin:400px 440px}
+@keyframes padRing{
+  0%,100%{stroke:#cfe6ff;stroke-width:4;filter:drop-shadow(0 0 6px #fff) drop-shadow(0 0 22px #4f8bff) drop-shadow(0 0 40px #4f8bff)}
+  35%,65%{stroke:#3d63c9;stroke-width:1.8;filter:drop-shadow(0 0 4px #2b4dff)}}
+@keyframes padInner{0%,100%{opacity:1;stroke:#d7b8ff}35%,65%{opacity:.35}}
+@keyframes padBase{0%,100%{opacity:1;transform:scale(1.12)}35%,65%{opacity:.35;transform:scale(.92)}}
+@keyframes beam{0%,100%{opacity:.9;transform:scaleY(1)}30%,70%{opacity:0;transform:scaleY(.6)}}
+@keyframes wave{0%{opacity:.9;transform:scale(1)}18%{opacity:0;transform:scale(1.35)}100%{opacity:0;transform:scale(1.35)}}
+
+/* ---------- LEGENDS ---------- */
+.legends{position:relative;padding:clamp(70px,9vw,110px) 0 0;overflow:hidden}
+.legends .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,2.4vw,32px);align-items:start;position:relative;z-index:2}
+.legends .copy{border-right:1px solid var(--line);padding-right:24px}
+.legends .copy p{margin-top:20px}
+.card{aspect-ratio:16/10.5;position:relative}
+.card .frame{height:100%}
+.card .tag{position:absolute;top:14px;left:16px;z-index:2;width:34px}
+.card .frame img{object-position:center 30%}
+.particles{position:relative;height:clamp(300px,34vw,440px);margin-top:-60px}
+#field{position:absolute;inset:0;width:100%;height:100%}
+.particles::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--bg) 0%,transparent 30%,transparent 70%,var(--bg));z-index:1;pointer-events:none}
+
+/* ---------- FOOTER ---------- */
+footer{position:relative;padding:20px 0 50px}
+footer .wrap{display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.foot-brand{display:flex;align-items:center;gap:clamp(20px,3vw,40px)}
+.foot-brand .logo{width:clamp(56px,7vw,80px)}
+.foot-brand .vs{width:1px;height:64px;background:rgba(255,255,255,.25)}
+.foot-brand .f50{font-size:clamp(2.8rem,5vw,4.2rem);background:linear-gradient(90deg,#fff,#7fb5ff 60%,#3a6bff);-webkit-background-clip:text;background-clip:text}
+.foot-brand .hyper{font-size:.9rem;letter-spacing:.42em;margin-top:2px}
+.field-cta{font-family:var(--display);font-size:.9rem;letter-spacing:.5em;display:flex;align-items:center;gap:18px}
+.field-cta svg{width:40px;transition:transform .3s}
+.field-cta:hover svg{transform:translateX(8px)}
+.legal{margin-top:40px;padding-top:22px;border-top:1px solid var(--line);font-size:.75rem;color:#6f7b98;width:100%}
+
+/* ---------- REVEAL ---------- */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.12s}.rv.d2{transition-delay:.24s}.rv.d3{transition-delay:.36s}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:1080px){
+  .tech .wrap{grid-template-columns:1fr 1fr}
+  .thumbs{grid-column:1/-1;grid-template-columns:1fr 1fr;width:100%}
+  .thumb .frame{aspect-ratio:16/10}
+  .legends .wrap{grid-template-columns:1fr 1fr}
+  .legends .copy{grid-column:1/-1;border:0;padding:0}
+}
+@media (max-width:860px){
+  .nav ul{position:fixed;inset:84px 0 auto 0;flex-direction:column;gap:0;background:rgba(3,6,15,.96);backdrop-filter:blur(14px);padding:10px var(--gutter) 24px;border-bottom:1px solid var(--line);transform:translateY(-12px);opacity:0;pointer-events:none;transition:.3s}
+  .nav ul a{display:block;padding:16px 0;border-bottom:1px solid var(--line)}
+  .menu-open .nav ul{transform:none;opacity:1;pointer-events:auto}
+  .menu-open header{background:rgba(3,6,15,.96)}
+  .burger{display:block}
+  .nav .right .sep{display:none}
+  .hero{padding-top:110px}
+  .hero .wrap{grid-template-columns:1fr}
+  .hero-visual{order:-1;max-width:520px}
+  .speedframe{display:none}
+  .badge360{right:0}.badge360 img{width:56px}
+  .scroll-ind{display:none}
+  .features .wrap{grid-template-columns:1fr}
+  .feat+.feat::before{left:20%;right:20%;top:0;bottom:auto;width:auto;height:1px}
+  .tech .wrap,.design .wrap{grid-template-columns:1fr}
+  .side-label{display:none}
+  .orbit{aspect-ratio:4/3}
+}
+@media (max-width:560px){
+  .legends .wrap{grid-template-columns:1fr}
+  .thumbs{grid-template-columns:1fr 1fr;gap:12px}
+  footer .wrap{flex-direction:column;align-items:flex-start}
+  .field-cta{letter-spacing:.3em}
+}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <nav class="wrap nav" aria-label="Principal">
+    <a href="#inicio" class="logo" aria-label="adidas — inicio"><img src="assets/logo-adidas.png" alt="adidas"></a>
+    <ul>
+      <li><a href="#inicio" class="active">Inicio</a></li>
+      <li><a href="#caracteristicas">Características</a></li>
+      <li><a href="#tecnologia">Tecnología</a></li>
+      <li><a href="#diseno">Diseño</a></li>
+      <li><a href="#leyendas">Leyendas del juego</a></li>
+    </ul>
+    <div class="right">
+      <span class="sep"></span>
+      <a class="ig" href="https://www.instagram.com/adidas/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de adidas"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff" stroke="none"/></svg></a>
+      <button class="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="wrap">
+      <div class="hero-copy">
+        <div class="brand-kicker rv">ADIDAS</div>
+        <h1><span class="rv d1" style="display:inline-block"><span class="f50">F50</span></span><span class="hyper rv d2" style="display:block">HYPERFAST ELITE</span></h1>
+        <div class="tagline rv d2">VELOCIDAD. CONTROL. DOMINIO.</div>
+        <p class="rv d3">Diseñados para quienes se crecen en el calor de la competición. La nueva generación de F50 te da la ventaja cuando más importa.</p>
+        <a href="#caracteristicas" class="cta rv d3">Descubre el F50 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h17M14 6l6 6-6 6"/></svg></a>
+      </div>
+
+      <div class="hero-visual rv d1">
+        <svg class="streak" viewBox="0 0 600 600" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="sb" x1="0" x2="1"><stop offset="0" stop-color="#2b4dff" stop-opacity="0"/><stop offset=".5" stop-color="#4f8bff"/><stop offset="1" stop-color="#2b4dff" stop-opacity="0"/></linearGradient>
+            <linearGradient id="sr" x1="0" x2="1"><stop offset="0" stop-color="#ff2d4a" stop-opacity="0"/><stop offset=".6" stop-color="#ff2d4a"/><stop offset="1" stop-color="#ff2d4a" stop-opacity="0"/></linearGradient>
+          </defs>
+          <path d="M20 460 C 160 120, 420 60, 590 200" stroke="url(#sb)" stroke-width="2.5" fill="none" opacity=".8"/>
+          <path d="M0 380 C 150 160, 380 120, 560 140" stroke="url(#sr)" stroke-width="2" fill="none" opacity=".7"/>
+          <path d="M60 560 C 260 360, 460 380, 600 470" stroke="url(#sb)" stroke-width="1.5" fill="none" opacity=".6"/>
+        </svg>
+        <div class="viewer" id="viewer" tabindex="0" role="application" aria-label="Modelo 3D del F50 Hyperfast Elite. Arrastra para girarlo; flechas izquierda y derecha para rotar, flecha abajo para ver la suela.">
+          <div class="v-float"></div>
+          <div class="v-hint" id="vhint"><svg viewBox="0 0 24 24" fill="none" stroke="#29b6ff" stroke-width="1.6"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M4 12h16"/></svg>Arrastra para girar</div>
+        </div>
+        <div class="v-ui">
+          <span class="v-label" id="vlabel">Modelo 3D interactivo</span>
+          <button class="v-sole-btn" id="vsole" type="button" aria-pressed="false">Ver suela</button>
+        </div>
+        <div class="hero-floor"></div>
+        <button class="badge360" type="button" aria-label="Activar o detener el giro automático 360°" aria-pressed="true" id="spin360"><img src="assets/icon-360.png" alt=""></button>
+      </div>
+    </div>
+    <div class="speedframe" style="right:var(--gutter);top:118px">SPEEDFRAME<br>F50<img src="assets/logo-adidas.png" alt=""></div>
+    <a href="#caracteristicas" class="scroll-ind" aria-label="Bajar"><span>SCROLL</span><i></i><b></b></a>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="caracteristicas" aria-label="Características">
+    <div class="wrap">
+      <div class="feat rv">
+        <div class="ic"><img class="white-icon" src="assets/icon-feather.png" alt="" style="max-height:40px"></div>
+        <h3>SÚPER LIGERO</h3>
+        <p>Máximo control de la velocidad sin comprometer tu juego.</p>
+      </div>
+      <div class="feat rv d1">
+        <div class="ic"><img class="white-icon" src="assets/icon-lock.png" alt=""></div>
+        <h3>SISTEMA DE AJUSTE</h3>
+        <p>Ajuste seguro y envolvente en cada movimiento.</p>
+      </div>
+      <div class="feat rv d2">
+        <div class="ic"><img class="white-icon" src="assets/icon-cleat.png" alt="" style="max-height:34px"></div>
+        <h3>TRACCIÓN AVANZADA</h3>
+        <p>Estabilidad y control para un juego explosivo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HALOSKIN -->
+  <section class="tech" id="tecnologia">
+    <div class="side-label">HALOSKIN+</div>
+    <div class="wrap">
+      <div class="frame big rv"><img src="assets/haloskin-texture.webp" alt="Detalle de la textura Haloskin+ del F50 con las franjas rojas y azules" loading="lazy"></div>
+      <div class="copy rv d1">
+        <div class="eyebrow">Tecnología</div>
+        <h2 class="h2">HALOSKIN<span class="plus">+</span></h2>
+        <div class="lead">Exterior ligero y ultraadaptable con revestimiento de agarre para un toque preciso.</div>
+        <p>El exterior Haloskin+ ofrece una sensación minimalista y un control seguro en cada jugada, con un revestimiento de agarre que maximiza la precisión en los momentos decisivos.</p>
+      </div>
+      <div class="thumbs">
+        <div class="thumb rv d2"><div class="frame"><img src="assets/haloskin-detail.webp" alt="Revestimiento de agarre" loading="lazy"></div><div class="cap">REVESTIMIENTO<br>DE AGARRE</div></div>
+        <div class="thumb rv d3"><div class="frame"><img src="assets/halocage-sole.webp" alt="Suela Halocage+ con tacos" loading="lazy"></div><div class="cap">HALOCAGE+</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESIGN -->
+  <section class="design" id="diseno">
+    <div class="wrap">
+      <div class="copy rv">
+        <div class="eyebrow">Diseño</div>
+        <h2 class="h2">Ligereza<br>en cada<br>movimiento</h2>
+        <p>La malla técnica Haloshell+ reduce el peso y revela la tecnología que te hace sentir más rápido. El laminado de TPU Halocage+ responde a los cortes rápidos y a los cambios bruscos de dirección.</p>
+      </div>
+      <div class="orbit rv d1">
+        <svg class="rings" viewBox="0 0 800 500" aria-hidden="true">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#2b8cff"/><stop offset=".5" stop-color="#8a3dff"/><stop offset="1" stop-color="#ff2d8a"/></linearGradient>
+            <linearGradient id="g2" x1="1" x2="0"><stop offset="0" stop-color="#29b6ff" stop-opacity=".2"/><stop offset=".5" stop-color="#29b6ff"/><stop offset="1" stop-color="#8a3dff" stop-opacity=".3"/></linearGradient>
+            <radialGradient id="base"><stop offset="0" stop-color="#5a8bff" stop-opacity=".55"/><stop offset="1" stop-color="#5a8bff" stop-opacity="0"/></radialGradient>
+            <linearGradient id="beamG" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#7fb4ff" stop-opacity=".5"/><stop offset=".45" stop-color="#5a6bff" stop-opacity=".12"/><stop offset="1" stop-color="#5a6bff" stop-opacity="0"/></linearGradient>
+            <!-- electric jitter -->
+            <filter id="zap" x="-20%" y="-50%" width="140%" height="200%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.09" numOctaves="2" seed="3" result="n">
+                <animate attributeName="seed" values="1;7;3;9;5;2" dur="0.45s" repeatCount="indefinite" calcMode="discrete"/>
+              </feTurbulence>
+              <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G" result="d"/>
+              <feGaussianBlur in="d" stdDeviation="3" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="d"/></feMerge>
+            </filter>
+          </defs>
+          <!-- platform (behind cleats) -->
+          <g class="pad">
+            <path class="beam" d="M175 440 Q400 470 625 440 L520 250 Q400 240 280 250 Z" fill="url(#beamG)"/>
+            <ellipse class="pad-base" cx="400" cy="440" rx="250" ry="34" fill="url(#base)"/>
+            <ellipse class="pad-ring" cx="400" cy="440" rx="230" ry="26" fill="none" stroke="#4f8bff" stroke-width="2.5"/>
+            <ellipse class="pad-inner" cx="400" cy="440" rx="180" ry="18" fill="none" stroke="#a46bff" stroke-width="1"/>
+            <ellipse class="pad-wave" cx="400" cy="440" rx="230" ry="26" fill="none" stroke="#bfe0ff" stroke-width="1.5"/>
+            <ellipse class="spark s3" pathLength="100" cx="400" cy="440" rx="230" ry="26"/>
+            <ellipse class="spark s4" pathLength="100" cx="400" cy="440" rx="180" ry="18"/>
+          </g>
+          <!-- orbit rings with electric spark -->
+          <g style="transform:rotate(-14deg);transform-origin:400px 250px">
+            <g class="spinA">
+              <ellipse class="r r1" cx="400" cy="250" rx="380" ry="130"/>
+              <ellipse class="spark s1" pathLength="100" cx="400" cy="250" rx="380" ry="130"/>
+              <ellipse class="spark s1b" pathLength="100" cx="400" cy="250" rx="380" ry="130"/>
+            </g>
+          </g>
+          <g style="transform:rotate(12deg);transform-origin:400px 250px">
+            <g class="spinB">
+              <ellipse class="r r2" cx="400" cy="250" rx="330" ry="170"/>
+              <ellipse class="spark s2" pathLength="100" cx="400" cy="250" rx="330" ry="170"/>
+              <ellipse class="spark s2b" pathLength="100" cx="400" cy="250" rx="330" ry="170"/>
+            </g>
+          </g>
+        </svg>
+        <img src="assets/design-cleats.webp" alt="Guayos F50 flotando sobre una plataforma de luz" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- LEGENDS -->
+  <section class="legends" id="leyendas">
+    <div class="wrap">
+      <div class="copy rv">
+        <div class="eyebrow">Leyendas del juego</div>
+        <h2 class="h2" style="font-size:clamp(1.8rem,2.8vw,2.5rem)">La velocidad<br>también se juega</h2>
+        <p>Grandes jugadores, la misma obsesión: ser más rápidos. El F50 impulsa a quienes entienden que cada milésima cuenta.</p>
+      </div>
+      <div class="card rv d1"><img class="tag" src="assets/logo-adidas.png" alt=""><div class="frame"><img src="assets/legend-1.webp" alt="Futbolista bajo las luces del estadio" loading="lazy"></div></div>
+      <div class="card rv d2"><img class="tag" src="assets/logo-adidas.png" alt=""><div class="frame"><img src="assets/legend-2.webp" alt="Futbolista en sprint nocturno en el estadio" loading="lazy"></div></div>
+    </div>
+    <div class="particles" aria-hidden="true"><canvas id="field"></canvas></div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-brand">
+      <img class="logo" src="assets/logo-adidas.png" alt="adidas">
+      <span class="vs"></span>
+      <div><span class="f50">F50</span><div class="hyper">HYPERFAST ELITE</div></div>
+    </div>
+    <a href="#inicio" class="field-cta">EL CAMPO ES TUYO <svg viewBox="0 0 40 12" fill="none" stroke="#fff" stroke-width="1.4"><path d="M0 6h38M32 1l6 5-6 5"/></svg></a>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const header = document.querySelector('header');
+  const body = document.body;
+  // nav background
+  const onScroll = () => header.classList.toggle('scrolled', scrollY > 30);
+  onScroll(); addEventListener('scroll', onScroll, {passive:true});
+
+  // mobile menu
+  const burger = document.querySelector('.burger');
+  burger.addEventListener('click', () => {
+    const open = body.classList.toggle('menu-open');
+    burger.setAttribute('aria-expanded', open);
+  });
+  document.querySelectorAll('.nav ul a').forEach(a => a.addEventListener('click', () => body.classList.remove('menu-open')));
+
+  // active nav link
+  const links = [...document.querySelectorAll('.nav ul a')];
+  const secs = links.map(a => document.querySelector(a.getAttribute('href')));
+  // the active section is the last one whose top has passed just below the fixed header
+  const setActive = id => links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
+  let lockUntil = 0, lockId = null;
+  function spy(){
+    if (performance.now() < lockUntil) { setActive(lockId); return; }
+    const line = header.offsetHeight + 24;
+    let cur = secs[0];
+    for (const s of secs) if (s && s.getBoundingClientRect().top <= line) cur = s;
+    if (innerHeight + scrollY >= document.documentElement.scrollHeight - 4) cur = secs[secs.length - 1];
+    setActive(cur.id);
+  }
+  links.forEach(a => a.addEventListener('click', () => {
+    lockId = a.getAttribute('href').slice(1); lockUntil = performance.now() + 1400; setActive(lockId);
+  }));
+  addEventListener('scroll', spy, {passive:true}); addEventListener('resize', spy); spy();
+
+  // reveal
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }), {threshold:.15});
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+  // keep the platform glow locked to the cleats' float cycle
+  const syncNames = new Set(['float','padRing','padInner','padBase','beam','wave']);
+  const syncPad = () => {
+    const orbit = document.querySelector('.orbit');
+    if (!orbit || !document.getAnimations) return;
+    orbit.getAnimations({subtree:true}).filter(a => syncNames.has(a.animationName)).forEach(a => a.currentTime = 0);
+  };
+  addEventListener('load', syncPad);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) syncPad(); });
+
+  // particle field (footer wave)
+  const c = document.getElementById('field'), ctx = c.getContext('2d');
+  let W, H, pts = [], dpr = Math.min(devicePixelRatio || 1, 2);
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function size(){
+    W = c.clientWidth; H = c.clientHeight; c.width = W*dpr; c.height = H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+    const n = Math.round(W * H / 160);
+    pts = Array.from({length:n}, () => ({x:Math.random()*W, u:Math.random(), s:Math.random()*1.4+.3, p:Math.random()*Math.PI*2}));
+  }
+  function draw(t){
+    ctx.clearRect(0,0,W,H);
+    for (const q of pts){
+      const base = H*.62 - Math.sin(q.x/W*Math.PI*1.4 + 0.6)*H*.22 + Math.sin(q.x/180 + t/2600)*14;
+      const spread = Math.pow(q.u,1.6) * H*.5;
+      const y = base + spread - H*.08 + Math.sin(t/1400 + q.p)*2;
+      const a = (1 - q.u) * (.35 + .65*Math.abs(Math.sin(t/900 + q.p)));
+      ctx.fillStyle = q.u < .15 ? `rgba(220,235,255,${a})` : `rgba(80,150,255,${Math.min(1,a*1.1)})`;
+      ctx.fillRect(q.x, y, q.s, q.s);
+    }
+    if (!reduce) requestAnimationFrame(draw);
+  }
+  size(); addEventListener('resize', size); requestAnimationFrame(draw);
+})();
+</script>
+<script src="assets/f50-model.js"></script>
+<script src="assets/f50-3d.js"></script>
+</body>
+</html>
